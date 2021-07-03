@@ -1,0 +1,21 @@
+class Automorphic {
+    public static void main(String[] args) { 
+        int n,n1=0,r=0,r1=0;
+        Scanner sc=new Scanner (.in);
+        n=sc.nextInt();
+        n1=n*n;
+        r=n%10;
+        r1=n1%10;
+        if(r==r1)
+        {
+        System.out.println("Automorphic"); 
+        }
+        else
+        {
+            System.out.println("Not Automorphic");
+        }
+    }
+}
+Output:
+76
+Automorphic
