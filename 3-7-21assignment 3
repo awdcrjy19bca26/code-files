@@ -1,6 +1,6 @@
 class Automorphic {
     public static void main(String[] args) { 
-        int n,n1=0,r=0,r1=0;
+        int n,n1,r,r1;
         Scanner sc=new Scanner (.in);
         n=sc.nextInt();
         n1=n*n;
