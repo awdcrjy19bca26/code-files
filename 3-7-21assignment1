@@ -1,0 +1,45 @@
+
+class Sqpattern {
+    public static void main(String[] args) {
+        int n=4,s=0,e;
+        char ch='A'; 
+        int b=(n*2)-1;
+        e=b-1;
+        char a[][]=new char[b][b];
+        while(n>0)
+        {
+        for(int i=s;i<=e;i++)
+        {
+            for(int j=s;j<=e;j++)
+            {
+                if(i==s||i==e||j==s||j==e)
+                a[i][j]=ch;
+                }
+            }
+        
+            ++s;
+            --e;
+            ++ch;
+            --n;
+        }
+        
+        for(int i=0;i<s;i++)
+        {
+            for(int j=0;j<s;j++)
+            {
+                System.out.print(a[i][j]);
+                System.out.println();
+            }
+            
+        }
+       
+    }
+}
+Output:
+A A A A A A A
+A B B B B B A
+A B C C C B A
+A B C D C B A
+A B C C C B A
+A B B B B B A
+A A A A A A A
