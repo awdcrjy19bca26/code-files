@@ -28,13 +28,11 @@ class Sqpattern {
             for(int j=0;j<s;j++)
             {
                 System.out.print(a[i][j]);
-                System.out.println();
-            }
-            
-        }
-       
-    }
-}
+             }
+            System.out.println();
+         }
+     }
+ }
 Output:
 A A A A A A A
 A B B B B B A
