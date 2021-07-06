@@ -1,0 +1,21 @@
+import java.util.*;
+class RunningSum {
+    public static void main(String[] args) {
+        Scanner x= new Scanner (System.in);
+        int n=x.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        a[i]=x.nextInt();
+        int s=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<i;j++)
+            s+=a[j];
+        }
+        System.out.println(s); 
+    }
+}
+Output:
+4
+3 4 5 6
+40
