@@ -1,0 +1,67 @@
+import java.util.*;
+class Swap
+{
+public static void main(String ar[])
+{
+int i,j;
+Scanner sc=new Scanner(System.in);
+int r=sc.nextInt();
+int c=sc.nextInt();
+int a[][]=new int[r][c];
+int b[][]=new int[r][c];
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+a[i][j]=sc.nextInt();
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+b[i][j]=sc.nextInt();
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+a[i][j]=a[i][j]+b[i][j];
+b[i][j]=a[i][j]-b[i][j];
+a[i][j]=a[i][j]-b[i][j];
+}
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+System.out.print(a[i][j]+" ");
+
+}
+System.out.println(" ");
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+System.out.print(b[i][j]+" ");
+
+}
+System.out.println(" ");
+}
+}
+}
+output:
+3 3
+1 2 3
+4 5 6
+7 8 9
+
+9 8 7 
+6 5 4
+3 2 1
+
+9 8 7 
+6 5 4
+3 2 1
+
+1 2 3
+4 5 6
+7 8 9
