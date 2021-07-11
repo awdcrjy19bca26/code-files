@@ -1,0 +1,16 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+public static void main(String args[])
+{
+String s=new String();
+Scanner sc=new Scanner(System.in);
+s=sc.nextLine();
+String t=s.toLowerCase();
+System.out.println(t);
+}
+}
+output:
+SUN RISES IN THE EAST
+sun rises in the east
