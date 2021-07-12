@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class upper
+{
+public static void main(String args[])
+{
+String s1;
+Scanner sc=new Scanner(System.in);
+s1=sc.nextLine();
+String s[]=s1.split(" ");
+String s2="";
+for(String i:s)
+{
+s2+=i.substring(0,1).toUpperCase() +i.substring(1) + " ";
+}
+System.out.println(s2);
+
+}
+}
+output:
+coding classes of aditya
+Coding Classes Of Aditya
