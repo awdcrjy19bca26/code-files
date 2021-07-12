@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class increase
+{
+void sortinc(String s1)
+{
+char ch[]=s1.toCharArray();
+Arrays.sort(ch);
+String s2="";
+for(int i=0;i<=ch.length-1;i++)
+{
+s2+=ch[i];
+}
+System.out.println(s2);
+}
+public static void main(String ar[])
+{
+String s1;
+Scanner s=new Scanner(System.in);
+s1=s.nextLine();
+increase i=new increase();
+i.sortinc(s1);
+}
+}
+output:
+elephant
+aeehlnpt
