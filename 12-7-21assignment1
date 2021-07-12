@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+class Decrease
+{
+void reverse(String s1)
+{
+char ch[]=s1.toCharArray();
+Arrays.sort(ch);
+String s2="";
+for(int i=ch.length-1;i>=0;i--)
+{
+s2+=ch[i];
+}
+System.out.println(s2);
+}
+
+public static void main(String ar[])
+{
+String s1;
+Scanner s=new Scanner(System.in);
+s1=s.nextLine();
+Decrease d=new Decrease();
+d.reverse(s1);
+}
+}
+output
+aeroplane
+rponleeaa
+
+ 
