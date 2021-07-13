@@ -1,0 +1,30 @@
+import java.util.*;
+class A
+{
+public void fact(int n)
+{
+int x=n;
+int f=1;
+for(int i=1;i<=x;i++)
+{
+f=f*i;
+}
+System.out.println("factorial:"+f);
+}
+public void display(int n)
+{
+fact(n);
+}
+
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("enter the value:");
+int n=s.nextInt();
+A a=new A();
+a.display(n);
+}
+}
+output:
+enter the value:6
+factorial:720
