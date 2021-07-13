@@ -1,0 +1,31 @@
+import java.util.*;
+class Prime 
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+System.out.println("Prime numbers are:");
+pnum(n);
+}
+public static void pnum(int n)
+{
+int n1=n;
+int j;
+for(j=2;j<=n1;j++)
+{
+int c=0;
+for(int i=1;i<=j;i++)
+{
+if(j%i==0)
+c++;
+}
+if(c==2)
+System.out.print(j+" ");
+}
+}
+}
+output:
+10
+Prime numbers are:
+2 3 5 7
