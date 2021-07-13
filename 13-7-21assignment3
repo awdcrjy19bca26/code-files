@@ -1,0 +1,23 @@
+import java.util.*;
+class A
+{
+public static void scount(String s)
+{
+String p[]=s.split(" ");
+int c=0;
+for(String i:p)
+{
+c++;
+}
+System.out.println("No .of words in a string:"+c);
+}
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+String s=sc.nextLine();
+scount(s);
+}
+} 
+output:
+India is my country
+no.of words in a string:4
