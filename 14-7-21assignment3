@@ -1,0 +1,23 @@
+import java.util.*;
+class Simple
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+float p=s.nextFloat();
+float t=s.nextFloat();
+float r=s.nextFloat();
+sinterest(p,t,r);
+}
+public static void sinterest(float p,float t,float r)
+{
+float i;
+i=p*t*r/100;
+System.out.println("Simple interest is:"+i);
+}
+}
+output:
+6.3
+5.0
+3.2
+simple interest is:1.008
