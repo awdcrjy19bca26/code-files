@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+class Array
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<String>list1=new ArrayList<String>();
+ArrayList<String>list2=new ArrayList<String>();
+System.out.println("enter no and elements");
+int n=sc.nextInt();
+for(int i=0;i<=n;i++)
+{
+list1.add(sc.nextLine());
+}
+System.out.println("enter no and elements");
+int n1=sc.nextInt();
+for(int i=0;i<=n1;i++)
+{
+list2.add(sc.nextLine());
+}
+ArrayList<String>list=new ArrayList<String>();
+list.addAll(list1);
+list.addAll(list2);
+for(int i=0;i<=n+n1+1;i++)
+System.out.print(list.get(i)+" ");
+}
+}
+
+output:enter no and elements
+3
+2 3 4
+enter no and elements
+3
+5 6 7
+2 3 4  5 6 7
