@@ -1,0 +1,39 @@
+import java.util.*;
+class Update
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter size");
+int n=s.nextInt();
+System.out.println("Enter search element");
+int k=s.nextInt();
+Vector v=new Vector();
+System.out.println("Enter elements");
+for(int i=0;i<n;i++)
+{
+v.add(s.nextInt());
+}
+boolean c=v.contains(k);
+if(c)
+{
+int a=v.indexOf(k);
+v.set(a,99);
+for(int i=0;i<n;i++)
+{
+System.out.println(v.get(i)+" ");
+}
+}
+else 
+{
+System.out.println("false");
+}
+}
+}
+output:
+Enter size:5
+Enter search element:4
+33 4 55 66 7
+33 99 55 66 7
+
+
