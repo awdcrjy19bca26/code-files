@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+class Delete
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter size");
+int n=s.nextInt();
+System.out.println("Enter search element");
+int k=s.nextInt();
+LinkedList l=new LinkedList();
+System.out.println("Enter elements");
+for(int i=0;i<n;i++)
+{
+l.add(s.nextInt());
+}
+boolean c=l.contains(k);
+if(c)
+{
+int a=l.indexOf(k);
+l.remove(a);
+for(int i=0;i<n;i++)
+{
+System.out.println(l.get(i)+" ");
+}
+}
+else 
+{
+System.out.println("element not found");
+}
+}
+}
+output:
+Enter size:4
+Enter search element:5
+Enter elements:
+55 66 5 77
+55 66 77
