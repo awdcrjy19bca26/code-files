@@ -1,0 +1,74 @@
+import java.util.*;
+class Menu
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+LinkedList l=new LinkedList();
+System.out.println("enter size:");
+int s1=s.nextInt();
+System.out.println("enter elements:");
+for(int i=0;i<s1;i++)
+l.add(s.nextInt());
+int n,ch=1;
+System.out.println("1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.exit");
+while(ch<8)
+{
+System.out.println("enter your choice:");
+ch=s.nextInt();
+switch(ch)
+{
+case 1:System.out.println("enter new element");
+        n=s.nextInt();
+       l.addFirst(n);
+        for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+break;
+case 2:System.out.println("enter new element");
+        n=s.nextInt();
+       l.addLast(n);
+        for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+break;
+case 3:System.out.println("enter the index to add element");
+       int in=s.nextInt();
+       l.add(in,99);
+        for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+break;
+case 4:l.removeFirst();
+        for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+break;
+case 5:l.removeLast();
+          for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+break;
+case 6:/*System.out.println("enter the index of the element remove");
+       int r=s.nextInt();*/
+       l.remove(2);
+break;
+case 7:for(int i=0;i<l.size();i++)
+         {
+         System.out.print(l.get(i)+" ");
+         }
+}
+}
+}
+}
+output:enter size:4
+enter elements:5 67 89 9
+1.BeginInsert 2.EndInsert 3.PositionInsert 4.BeginDelete 5.EndDelete 6.PositionDelete 7.Display 8.exit
+enter your chice:1
+eneter new element:4
+4 5 67 89 9
