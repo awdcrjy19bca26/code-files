@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class Solution
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter array size and elements:");
+int n=s.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=s.nextInt();
+count(a,n);
+}
+public static void count(int a[],int n)
+{
+HashMap<Integer,Integer> m=new HashMap<>();
+for(int i=0;i<n;i++)
+{
+if(m.containsKey(a[i]))
+m.put(a[i],m.get(a[i])+1);
+else
+m.put(a[i],1);
+}
+System.out.print(m);
+}
+}
+output:
+Enter array size and elements:
+4
+4 3 4 3
+{3=2, 4=2}
