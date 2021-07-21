@@ -1,0 +1,36 @@
+import java.util.*;
+class Demo2
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter array size and elements");
+int n=sc.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+Stack<Integer>st=new Stack<Integer>();
+for(int i=0;i<n;i++)
+st.push(a[i]);
+Stack<Integer>e=new Stack<Integer>();
+Stack<Integer>o=new Stack<Integer>();
+for(int i=0;i<n;i++)
+{
+if(a[i]%2==0)
+e.push(a[i]);
+else
+o.push(a[i]);
+}
+int e1=e.size();
+int o1=o.size();
+if(e1==o1)
+System.out.println("stack is balanced");
+else
+System.out.println("stack is not balanced");
+}
+}
+output:
+enter array size and elements
+4
+4 5 6 7
+stack is balanced
