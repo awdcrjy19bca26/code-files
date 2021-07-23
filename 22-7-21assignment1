@@ -1,0 +1,48 @@
+import java.util.*;
+class MyQueue
+{
+Stack<Integer> s1=new Stack<Integer>();
+Stack<Integer> s2=new Stack<Integer>();
+public MyQueue(){
+}
+public void push(int x)
+{
+s1.push(x);
+}
+public int pop()
+{
+if(s2.isEmpty())
+{
+while(!s1.isEmpty())
+{
+int t=s1.pop();
+s2.push(t);
+}}
+return s2.pop();
+}
+public  int peek()
+{
+if(s2.isEmpty())
+{
+while(!s1.isEmpty())
+{
+int t1=s1.pop();
+s2.push(t1);
+}
+}
+return s2.peek();
+}
+public boolean empty()
+{
+return s1.isEmpty()&&s2.isEmpty();
+}
+}
+output:
+your input
+["MyQueue","push","push","peek","pop","empty"]
+[[],[1],[2],[],[],[]]
+output
+[null,null,null,1,1,false]
+Expected
+[null,null,null,1,1,false]
+
