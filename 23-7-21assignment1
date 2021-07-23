@@ -1,0 +1,25 @@
+import java.util.*;
+class Problem
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=s.nextInt();
+ArrayList<Integer> al=new ArrayList<Integer>();
+for(int i=0;i<n;i++)
+al.add(a[i]);
+Iterator<Integer> it=al.iterator();
+while(it.hasNext())
+{
+Integer i1=(Integer)it.next();
+System.out.print(i1+" ");
+}
+}
+}
+output:
+5
+8 76 87 44 57
+8 76 87 44 57
