@@ -1,0 +1,51 @@
+import java.util.*;
+class Answer
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("enter your string");
+String str=s.nextLine();
+boolean st=isbal(str);
+if(st)
+System.out.println("balanced");
+else
+System.out.println("not balanced");
+}
+public static boolean isbal(String str)
+{
+if(str==null||str.length()%2!=0)
+return false;
+Stack <Character>sa=new Stack<Character>();
+for(int i=0;i<str.length();i++)
+{
+char c=str.charAt(i);
+if((c=='{')||(c=='(')||(c=='['))
+sa.push(c);
+else
+{
+if((c=='}')||(c==')')||(c==']'))
+{
+if(!sa.isEmpty())
+{
+char ls=sa.pop();
+if((ls=='{')&&(c!='}'))
+return false;
+if((ls=='(')&&(c!=')'))
+return false;
+if((ls=='[')&&(c!=']'))
+return false;
+}
+}
+else
+return false;
+}
+}
+return sa.isEmpty();
+}
+}
+output:
+enter your string
+[]
+balanced
+
