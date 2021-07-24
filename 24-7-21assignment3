@@ -1,0 +1,24 @@
+import java.util.*;
+class Program3
+{
+public static void main(String args[])
+{
+String s1,s2,s3,s4;
+System.out.println("enter your strings:");
+Scanner s=new Scanner(System.in);
+s1=s.nextLine();
+s2=s.nextLine();
+s3=s1.concat(s2);
+StringBuffer t=new StringBuffer(s3);
+t.reverse();
+s4=t.toString();
+System.out.println("after string reverse:");
+System.out.println(s4);
+}
+}
+output:
+enter your strings:
+Geeks
+forGeeks
+after string reverse:
+skeeGrofskeeG
