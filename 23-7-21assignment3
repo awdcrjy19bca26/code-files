@@ -27,7 +27,7 @@ System.out.println("name:"+hm.get(k));
 }
 }
 output:
-1
+3
 56 67 75
 ram shyam raju
 rollno:56 name:ram
