@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+class Problem2
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+String s1[]=new String[n];
+for(int j=0;j<n;j++)
+s1[j]=sc.next();
+HashMap<Integer,String> hm=new HashMap<Integer,String>();
+for(int i=0;i<n;i++)
+{
+hm.put(a[i],s1[i]);
+}
+Iterator it=hm.keySet().iterator();
+while(it.hasNext())
+{
+int k=(int)it.next();
+System.out.print("rollno:"+k+" " );
+System.out.println("name:"+hm.get(k));
+}
+}
+}
+output:
+1
+56 67 75
+ram shyam raju
+rollno:56 name:ram
+rollno:67 name:shyam
+rollno:75 name:raju
