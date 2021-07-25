@@ -1,0 +1,27 @@
+import java.util.*;
+class Program1
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=s.nextInt();
+System.out.println("enter target element");
+int k=s.nextInt();
+for(int i=0;i<n;i++)
+{
+if(a[i]==k)
+System.out.println(i);
+else if((a[i]>k)&&(a[i]<k))
+System.out.println(i);
+}
+}
+}
+output:
+4
+1 2 4 5
+enter target element
+5
+3
