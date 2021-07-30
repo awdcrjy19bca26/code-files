@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Primenumbers {
+    static int prime[]=new int[1000000];
+    //static int a[]=new int[1000000];
+    public static void seive()
+    {
+        for(int i=0;i<1000000;i++)
+            prime[i]=1;
+        prime[0]=0;
+        prime[1]=0;
+        for(int p=2;p*p<1000000;p++)
+        {
+            if(prime[p]==1)
+            {
+                for(int j=p*p;j<1000000;j+=p)
+                    prime[j]=0;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+         int t=sc.nextInt();
+        seive();
+      while(t!=0)
+       {
+          int n=sc.nextInt();
+             t--;
+        if(n%2==0&&n<=1000000)
+        {
+        if(n!=2)
+            System.out.println("Deepa");
+        else 
+            System.out.println("Arjit");
+        }
+       }
+    }
+  }
+output:
+2
+4 8
+Deepa
+Deepa
