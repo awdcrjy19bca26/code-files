@@ -1,0 +1,61 @@
+import java.util.Scanner;
+import java.lang.*;
+import java.io.*;
+class Main
+{
+static int N=2000005;
+public static boolean prime[]=new boolean[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=true;
+}
+prime[0]=false;
+prime[1]=false;
+for(int p=2;p*p<N;p++)
+{
+if(prime[p]==true)
+{
+for(int j=p*p;j<N;j=j+p)
+{
+prime[j]=false;
+}
+}
+}
+}
+public static boolean isPrime(int a)
+{
+if(prime[a])
+return true;
+return false;
+}
+public static void main (String[] args) 
+{
+sieve();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array size and elements ");
+int n=sc.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+   a[i]=sc.nextInt(); 
+   int max=-1;
+for(int i=0;i<n;i++)
+ {
+   if(isPrime(a[i]))
+    {
+    if(a[i]>max)
+      max=a[i];
+     }
+  }
+if(max==-1)
+System.out.println("there are no prime number in the array");
+else
+System.out.println("the prime number in the array"+max);
+}
+}
+output:
+Enter array  size and elements:
+5
+12 34 23 56 78
+the prime number in the array 23
