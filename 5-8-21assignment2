@@ -1,0 +1,27 @@
+import java.util.*;
+class Solution
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int a[]=new int[n];
+ArrayList<Integer> l=new ArrayList<>();
+for(int i=0;i<n;i++)
+a[i]=s.nextInt();
+for(int i=0;i<n;i++)
+{
+for(int j=i;j<n;j++)
+{
+for(int k=i;k<=j;k++)
+l.add(a[k]);
+System.out.print(l);
+l.clear();
+}
+}
+}
+}
+output:
+3
+1 2 3
+[1][1,2][1,2,3][2][2,3][3]
