@@ -1,0 +1,23 @@
+import java.util.*;
+class Febonacci
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+for(int i=0;i<n;i++)
+System.out.print(feb(i)+" ");
+}
+public static int feb(int n)
+{
+int f=0,n1=0,n2=1;
+if(n==0)
+return 0;
+if(n==1||n==2)
+return 1;
+return feb(n-2)+feb(n-1);
+}
+}
+output:
+10
+0 1 1 2 3 5 8 13 21 34
