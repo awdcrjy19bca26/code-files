@@ -1,0 +1,23 @@
+import java.util.*;
+class Rsum
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int r=sum(n);
+System.out.println("sum of digits:"+r);
+}
+static int sum(int n)
+{
+if(n==0)
+return 0;
+return n%10+sum(n/10);
+}
+}
+output:
+121
+sum of digits:4
+-------------------------
+567
+sum of digits:18
