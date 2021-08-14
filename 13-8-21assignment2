@@ -1,0 +1,31 @@
+import java.util.*;
+class Rprime
+{
+public static void main(String ar[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int r=prime(n,2);
+if(r==1)
+System.out.println("Prime number");
+else
+System.out.println("Not prime number");
+}
+static int prime(int n,int i)
+{
+if(i<n)
+{
+if(n%i!=0)
+return prime(n,++i);
+else
+return 0;
+}
+return 1;
+}
+}
+output:
+17
+Prime number
+---------------------
+56
+Not prime number
